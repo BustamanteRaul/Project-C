@@ -1,0 +1,39 @@
+classDiagram
+direction TB
+class StashService {
+    +Deposit(Guid itemId, int quantity)
+    +Withdraw(int catalogItemId, int quantity)
+}
+class IStashRepository {
+    <<interface>>
+    +ReadEntries()
+    +CommitTransfer(TransferPlan plan)
+}
+class SqliteStashRepository {
+    +ReadEntries()
+    +CommitTransfer(TransferPlan plan)
+}
+class ItemFactory {
+    +Create(int catalogItemId)
+}
+class ItemCatalog {
+    +Find(int catalogItemId)
+}
+class ItemDefinition {
+    +int CatalogItemId
+    +string Code
+    +ItemKind Kind
+    +int? Tier
+    +decimal UnitWeight
+}
+class TransferPlan {
+    +Validate()
+    +PrepareRuntimeChanges()
+}
+StashService --> IStashRepository : usa
+StashService --> ItemFactory : reconstruye
+StashService ..> TransferPlan : prepara
+SqliteStashRepository ..|> IStashRepository : implementa
+IStashRepository ..> TransferPlan : confirma
+ItemFactory --> ItemCatalog : consulta
+ItemCatalog "1" --> "0..*" ItemDefinition : definiciones

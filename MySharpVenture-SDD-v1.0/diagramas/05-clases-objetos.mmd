@@ -1,0 +1,47 @@
+classDiagram
+direction TB
+class Entity
+class Inventory {
+    +List~Item~ Items
+    +decimal CurrentWeight
+    +decimal Capacity
+    +bool IsOverweight
+    +Add(Item item)
+    +Remove(Guid runtimeId)
+    +WeightOf(Item item)
+}
+class Item {
+    <<abstract>>
+    +Guid RuntimeId
+    +int CatalogItemId
+    +ItemDefinition Definition
+}
+class Weapon {
+    +WeaponVariant Variant
+    +int LoadedAmmo
+    +int MagazineCapacity
+    +Reload()
+}
+class Accessory {
+    +AccessorySlot Slot
+    +IsCompatibleWith(Weapon weapon)
+}
+class Consumable {
+    +ConsumableType Type
+    +int Quantity
+}
+class Cyberware {
+    +BodyZone Slot
+    +int CapacityCost
+}
+class Quickhack {
+    +int RamCost
+}
+Entity "1" *-- "1" Inventory : pertenencia
+Inventory "0..1" --> "0..*" Item : objetos
+Item <|-- Weapon
+Item <|-- Accessory
+Item <|-- Consumable
+Item <|-- Cyberware
+Item <|-- Quickhack
+Weapon "0..1" --> "0..2" Accessory : mira y cargador

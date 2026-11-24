@@ -1,0 +1,20 @@
+usecase-beta
+direction LR
+actor Jugador("Jugador")
+systemBoundary sistema["MySharpVenture - sesión y aventura"]
+    CU05("CU05 Crear personaje")
+    CU01("CU01 Completar aventura")
+    CU02("CU02 Resolver combate")
+    CU15("CU15 Recoger botín")
+    CU13("CU13 Retirarse")
+    CU14("CU14 Salir del juego")
+end
+Jugador -- CU05
+Jugador -- CU01
+Jugador -- CU02
+Jugador -- CU15
+Jugador -- CU13
+Jugador -- CU14
+CU02 ..> : extend CU01
+CU15 ..> : extend CU01
+CU13 ..> : extend CU01

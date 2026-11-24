@@ -1,0 +1,36 @@
+erDiagram
+    direction TB
+    ITEM_CATALOG {
+        int catalog_item_id PK
+        string kind
+    }
+    WEAPON_DEFINITION {
+        int catalog_item_id PK, FK
+        string category
+        string variant
+        string technology "Opcional"
+        decimal base_damage
+        decimal stamina_cost
+        decimal base_hit_chance
+        decimal critical_chance
+        decimal critical_multiplier
+        int magazine_capacity
+        int ammo_catalog_id FK "Nulo en melee"
+    }
+    ACCESSORY_DEFINITION {
+        int catalog_item_id PK, FK
+        string slot "Sight o Magazine"
+    }
+    ACCESSORY_COMPATIBILITY {
+        int accessory_catalog_id PK, FK
+        string weapon_variant PK
+    }
+    CONSUMABLE_DEFINITION {
+        int catalog_item_id PK, FK
+        string subtype
+    }
+    ITEM_CATALOG ||--o| WEAPON_DEFINITION : detalle_arma
+    ITEM_CATALOG ||--o| ACCESSORY_DEFINITION : detalle_accesorio
+    ITEM_CATALOG ||--o| CONSUMABLE_DEFINITION : detalle_consumible
+    ACCESSORY_DEFINITION ||--|{ ACCESSORY_COMPATIBILITY : compatible_con
+    ITEM_CATALOG o|..o{ WEAPON_DEFINITION : es_municion_de

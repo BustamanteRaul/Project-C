@@ -1,0 +1,55 @@
+classDiagram
+direction TB
+class Entity {
+    <<abstract>>
+    +Guid Id
+    +string Name
+    +int Level
+    +decimal CurrentHealth
+    +decimal MaxHealth
+    +decimal CurrentShield
+    +decimal MaxShield
+    +decimal CurrentStamina
+    +decimal MaxStamina
+    +ReceiveDamage(DamageResult result)
+    +Regenerate()
+}
+class Person {
+    +OriginPath Origin
+    +int Experience
+    +int AttributePoints
+    +int SkillPoints
+    +int CyberwareCapacity
+    +int MaxEquippedWeapons = 3
+    +IncreaseAttribute(AttributeType type)
+    +UnlockPerk(Perk perk)
+}
+class Bot {
+    +string Model
+    +int MaxEquippedWeapons = 1
+}
+class AttributeStat {
+    +AttributeType Type
+    +int Value
+    +int Maximum = 10
+}
+class Perk {
+    +int Id
+    +string Name
+    +AttributeType Branch
+    +int TreeLevel
+    +int RequiredAttributeValue
+    +int Cost = 1
+    +CanUnlockFor(Person person)
+}
+class EnemyProfile {
+    +CombatRole Role
+    +string Affiliation
+    +ChooseIntention(Entity enemy)
+}
+Entity <|-- Person
+Entity <|-- Bot
+Person "1" *-- "5" AttributeStat : atributos
+Person "0..*" --> "0..*" Perk : desbloqueadas
+Perk "0..*" --> "0..*" Perk : requiere
+Entity "0..*" --> "0..1" EnemyProfile : comportamiento enemigo

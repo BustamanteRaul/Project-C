@@ -1,0 +1,13 @@
+digraph G {
+graph [rankdir=TB,bgcolor="white",pad=0.35,nodesep=0.6,ranksep=0.9,splines=polyline,fontname="DejaVu Sans",fontsize=20,fontcolor="#173044",labelloc=t,compound=true];
+node [fontname="DejaVu Sans",fontsize=12,color="#42667d",fontcolor="#173044",style=filled,fillcolor="#f3f7fa",margin="0.18,0.13",penwidth=1.2];
+edge [fontname="DejaVu Sans",fontsize=11,color="#536c7e",fontcolor="#31536a",arrowsize=0.8,penwidth=1.2,labeldistance=1.8,labelangle=25];
+label="Modelo relacional · cyberware y quickhacks";
+ITEM_CATALOG [shape=record,label="{ITEM_CATALOG|catalog_item_id : int [PK]\lkind : string\l}"];
+CYBERWARE_DEFINITION [shape=record,label="{CYBERWARE_DEFINITION|catalog_item_id : int [PK, FK]\lbody_zone : string\lcapacity_cost : int\loperating_system_kind : string\l}"];
+CYBERDECK_DEFINITION [shape=record,label="{CYBERDECK_DEFINITION|catalog_item_id : int [PK, FK]\lmax_ram : decimal\lram_regeneration : decimal\l}"];
+QUICKHACK_DEFINITION [shape=record,label="{QUICKHACK_DEFINITION|catalog_item_id : int [PK, FK]\lram_cost : decimal\l}"];
+ITEM_CATALOG -> CYBERWARE_DEFINITION [dir=none,taillabel="1",headlabel="0..1",label="detalle implante",style=solid];
+CYBERWARE_DEFINITION -> CYBERDECK_DEFINITION [dir=none,taillabel="1",headlabel="0..1",label="detalle cyberdeck",style=solid];
+ITEM_CATALOG -> QUICKHACK_DEFINITION [dir=none,taillabel="1",headlabel="0..1",label="detalle quickhack",style=solid];
+}

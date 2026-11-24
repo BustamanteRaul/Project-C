@@ -1,0 +1,30 @@
+erDiagram
+    direction TB
+    ITEM_CATALOG {
+        int catalog_item_id PK
+        string code UK
+        string name
+        string kind
+        int tier "Nulo si no corresponde"
+        int unit_weight_g
+        int buy_price
+        int sell_price
+        boolean can_stash
+        boolean can_craft
+        boolean can_dismantle
+        int next_tier_id FK, UK "Opcional"
+    }
+    STASH_ENTRY {
+        int catalog_item_id PK, FK
+        int quantity "Mayor que cero"
+    }
+    ITEM_EFFECT {
+        int catalog_item_id PK, FK
+        int effect_order PK
+        string effect_code
+        decimal magnitude
+        int duration_turns "Opcional"
+    }
+    ITEM_CATALOG ||--o| STASH_ENTRY : cantidad_guardada
+    ITEM_CATALOG ||--o{ ITEM_EFFECT : efectos_definidos
+    ITEM_CATALOG o|..o| ITEM_CATALOG : siguiente_tier

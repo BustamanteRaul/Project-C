@@ -1,0 +1,21 @@
+digraph G {
+graph [rankdir=TB,bgcolor="white",pad=0.35,nodesep=0.6,ranksep=0.9,splines=polyline,fontname="DejaVu Sans",fontsize=20,fontcolor="#173044",labelloc=t,compound=true];
+node [fontname="DejaVu Sans",fontsize=12,color="#42667d",fontcolor="#173044",style=filled,fillcolor="#f3f7fa",margin="0.18,0.13",penwidth=1.2];
+edge [fontname="DejaVu Sans",fontsize=11,color="#536c7e",fontcolor="#31536a",arrowsize=0.8,penwidth=1.2,labeldistance=1.8,labelangle=25];
+label="Sesión, aventura y stash";
+Person [shape=record,label="{Person}"];
+ItemDefinition [shape=record,label="{ItemDefinition}"];
+GameSession [shape=record,label="{GameSession|+Person? CurrentCharacter\l+GameState State\l}"];
+Expedition [shape=record,label="{Expedition|+int EventCount = 5\l+int EventsResolved\l+bool HasMerchant\l|+Complete()\l+Retreat()\l}"];
+Zone [shape=record,label="{Zone|+string Name\l+string Affiliation\l+int MinEnemyLevel\l+int MaxEnemyLevel\l}"];
+EventOccurrence [shape=record,label="{EventOccurrence|+int Position\l+EventType Type\l+bool IsResolved\l|+Preview()\l}"];
+Stash [shape=record,label="{Stash|+List\<StashEntry\> Entries\l}"];
+StashEntry [shape=record,label="{StashEntry|+int CatalogItemId\l+int Quantity\l}"];
+GameSession -> Person [dir=both,arrowtail=diamond,arrowhead=none,taillabel="1",headlabel="0..1",label="personaje activo"];
+GameSession -> Expedition [dir=both,arrowtail=diamond,arrowhead=none,taillabel="1",headlabel="0..1",label="aventura activa"];
+GameSession -> Stash [arrowhead=vee,taillabel="1",headlabel="1",label="unico compartido"];
+Expedition -> Zone [arrowhead=vee,taillabel="0..*",headlabel="1",label="zona seleccionada"];
+Expedition -> EventOccurrence [dir=both,arrowtail=diamond,arrowhead=none,taillabel="1",headlabel="5",label="eventos"];
+Stash -> StashEntry [dir=both,arrowtail=diamond,arrowhead=none,taillabel="1",headlabel="0..*",label="cantidades guardadas"];
+StashEntry -> ItemDefinition [arrowhead=vee,taillabel="0..*",headlabel="1",label="objeto del catalogo"];
+}

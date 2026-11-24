@@ -2,9 +2,10 @@ using MySharpVenture.Pantallas;
 
 namespace MySharpVenture;
 
-public class GameEngine(Dictionary<PantallaId, IPantalla> screens, PantallaId startScreen = PantallaId.MenuPrincipal)
+public class GameEngine(Dictionary<PantallaId, IPantalla> screens, PantallaId startScreen = PantallaId.Bienvenida)
 {
-    private readonly Dictionary<PantallaId, IPantalla> _screens = screens;
+    private readonly Dictionary<PantallaId, IPantalla> _screens =
+        screens ?? throw new ArgumentNullException(nameof(screens));
     private readonly PantallaId _startScreen = startScreen;
 
     public void Run()

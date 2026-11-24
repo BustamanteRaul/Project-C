@@ -1,0 +1,23 @@
+usecase-beta
+direction LR
+actor Jugador("Jugador")
+systemBoundary sistema["MySharpVenture - MVP"]
+    CU05("CU05 Crear personaje")
+    CU07("CU07 Gestionar inventario y equipo")
+    CU03("CU03 Gestionar stash")
+    CU01("CU01 Completar aventura")
+    CU02("CU02 Resolver combate")
+    CU15("CU15 Recoger botín")
+    CU08("CU08 Utilizar curación")
+    CU14("CU14 Salir del juego")
+end
+Jugador -- CU05
+Jugador -- CU07
+Jugador -- CU03
+Jugador -- CU01
+Jugador -- CU02
+Jugador -- CU15
+Jugador -- CU08
+Jugador -- CU14
+CU02 ..> : extend CU01
+CU15 ..> : extend CU01

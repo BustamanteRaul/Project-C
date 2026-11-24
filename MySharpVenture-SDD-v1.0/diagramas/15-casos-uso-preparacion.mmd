@@ -1,0 +1,23 @@
+usecase-beta
+direction LR
+actor Jugador("Jugador")
+systemBoundary sistema["MySharpVenture - preparación y equipo"]
+    CU03("CU03 Gestionar stash")
+    CU04("CU04 Mejorar objeto")
+    CU06("CU06 Asignar puntos")
+    CU07("CU07 Gestionar inventario y equipo")
+    CU08("CU08 Utilizar curación")
+    CU09("CU09 Comprar o vender")
+    CU10("CU10 Visitar ripperdoc")
+    CU11("CU11 Fabricar objeto")
+    CU12("CU12 Desarmar objeto")
+end
+Jugador -- CU03
+Jugador -- CU04
+Jugador -- CU06
+Jugador -- CU07
+Jugador -- CU08
+Jugador -- CU09
+Jugador -- CU10
+Jugador -- CU11
+Jugador -- CU12

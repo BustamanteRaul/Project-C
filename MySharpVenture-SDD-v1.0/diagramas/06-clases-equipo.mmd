@@ -1,0 +1,40 @@
+classDiagram
+direction TB
+class Entity
+class Weapon
+class Equipment {
+    +List~Guid~ EquippedWeaponIds
+    +List~Guid~ InstalledCyberwareIds
+    +int UsedCyberwareCapacity
+    +ValidateCapacity()
+}
+class Cyberware
+class OperatingSystem {
+    <<abstract>>
+}
+class Cyberdeck {
+    +decimal CurrentRam
+    +decimal MaxRam
+    +int MaxQuickhacks = 4
+    +List~Guid~ EquippedQuickhackIds
+    +SpendRam(int amount)
+}
+class Sandevistan {
+    +Activate(CombatContext context)
+}
+class Quickhack
+class CombatEffect {
+    +string EffectCode
+    +int RemainingTurns
+    +bool IsTemporary
+    +Apply(Entity target)
+}
+Entity "1" *-- "1" Equipment : equipo
+Equipment "0..1" --> "0..3" Weapon : armas equipadas
+Equipment "0..1" --> "0..10" Cyberware : implantes instalados
+Cyberware <|-- OperatingSystem
+OperatingSystem <|-- Cyberdeck
+OperatingSystem <|-- Sandevistan
+Cyberdeck "0..1" --> "0..4" Quickhack : configurados
+Quickhack ..> CombatEffect : aplica
+Cyberware ..> CombatEffect : aporta o activa

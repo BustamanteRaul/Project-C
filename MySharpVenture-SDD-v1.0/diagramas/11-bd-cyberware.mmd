@@ -1,0 +1,24 @@
+erDiagram
+    direction TB
+    ITEM_CATALOG {
+        int catalog_item_id PK
+        string kind
+    }
+    CYBERWARE_DEFINITION {
+        int catalog_item_id PK, FK
+        string body_zone
+        int capacity_cost
+        string operating_system_kind "Opcional"
+    }
+    CYBERDECK_DEFINITION {
+        int catalog_item_id PK, FK
+        decimal max_ram
+        decimal ram_regeneration
+    }
+    QUICKHACK_DEFINITION {
+        int catalog_item_id PK, FK
+        decimal ram_cost
+    }
+    ITEM_CATALOG ||--o| CYBERWARE_DEFINITION : detalle_implante
+    CYBERWARE_DEFINITION ||--o| CYBERDECK_DEFINITION : detalle_cyberdeck
+    ITEM_CATALOG ||--o| QUICKHACK_DEFINITION : detalle_quickhack

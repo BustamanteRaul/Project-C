@@ -1,0 +1,18 @@
+digraph G {
+graph [rankdir=TB,bgcolor="white",pad=0.35,nodesep=0.6,ranksep=0.9,splines=polyline,fontname="DejaVu Sans",fontsize=20,fontcolor="#173044",labelloc=t,compound=true];
+node [fontname="DejaVu Sans",fontsize=12,color="#42667d",fontcolor="#173044",style=filled,fillcolor="#f3f7fa",margin="0.18,0.13",penwidth=1.2];
+edge [fontname="DejaVu Sans",fontsize=11,color="#536c7e",fontcolor="#31536a",arrowsize=0.8,penwidth=1.2,labeldistance=1.8,labelangle=25];
+label="Entidades, atributos y habilidades";
+Entity [shape=record,label="{«abstract»\nEntity|+Guid Id\l+string Name\l+int Level\l+decimal CurrentHealth\l+decimal MaxHealth\l+decimal CurrentShield\l+decimal MaxShield\l+decimal CurrentStamina\l+decimal MaxStamina\l|+ReceiveDamage(DamageResult result)\l+Regenerate()\l}"];
+Person [shape=record,label="{Person|+OriginPath Origin\l+int Experience\l+int AttributePoints\l+int SkillPoints\l+int CyberwareCapacity\l+int MaxEquippedWeapons = 3\l|+IncreaseAttribute(AttributeType type)\l+UnlockPerk(Perk perk)\l}"];
+Bot [shape=record,label="{Bot|+string Model\l+int MaxEquippedWeapons = 1\l}"];
+AttributeStat [shape=record,label="{AttributeStat|+AttributeType Type\l+int Value\l+int Maximum = 10\l}"];
+Perk [shape=record,label="{Perk|+int Id\l+string Name\l+AttributeType Branch\l+int TreeLevel\l+int RequiredAttributeValue\l+int Cost = 1\l|+CanUnlockFor(Person person)\l}"];
+EnemyProfile [shape=record,label="{EnemyProfile|+CombatRole Role\l+string Affiliation\l|+ChooseIntention(Entity enemy)\l}"];
+Entity -> Person [dir=back,arrowtail=empty,arrowhead=none];
+Entity -> Bot [dir=back,arrowtail=empty,arrowhead=none];
+Person -> AttributeStat [dir=both,arrowtail=diamond,arrowhead=none,taillabel="1",headlabel="5",label="atributos"];
+Person -> Perk [arrowhead=vee,taillabel="0..*",headlabel="0..*",label="desbloqueadas"];
+Perk -> Perk [arrowhead=vee,taillabel="0..*",headlabel="0..*",label="requiere"];
+Entity -> EnemyProfile [arrowhead=vee,taillabel="0..*",headlabel="0..1",label="comportamiento enemigo"];
+}

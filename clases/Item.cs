@@ -1,23 +1,17 @@
-using Spectre.Console;
 namespace MySharpVenture;
 
-public class Item(int Id, string Nombre, string Descripcion, int Cantidad)
+public abstract class Item
 {
-    public int Id { get; set; } = Id;
-    public string Nombre { get; set; } = Nombre;
-    public string Descripcion { get; set; } = Descripcion;
-    public int Cantidad { get; set; } = Cantidad;
+    public Guid RuntimeId { get; } = Guid.NewGuid();
+    public ItemDefinition Definition { get; private protected set; }
+    public int CatalogItemId => Definition.CatalogItemId;
+    internal Inventory? Owner { get; set; }
+    internal bool IsDiscarded { get; private set; }
 
+    internal void MarkDiscarded() => IsDiscarded = true;
 
-    public void GetInfo()
+    protected Item(ItemDefinition definition)
     {
-        var table = new Table()
-            .AddColumn("Campo")
-            .AddColumn("Contenido")
-            .AddRow("ID", Id.ToString())
-            .AddRow($"Nombre:", Nombre)
-            .AddRow($"Descripcion:", Descripcion)
-            .AddRow($"Cantidad:", Cantidad.ToString());
-        AnsiConsole.Write(table);
+        Definition = definition;
     }
 }

@@ -1,0 +1,31 @@
+digraph G {
+graph [rankdir=TB,bgcolor="white",pad=0.35,nodesep=0.6,ranksep=0.9,splines=polyline,fontname="DejaVu Sans",fontsize=20,fontcolor="#173044",labelloc=t,compound=true];
+node [fontname="DejaVu Sans",fontsize=12,color="#42667d",fontcolor="#173044",style=filled,fillcolor="#f3f7fa",margin="0.18,0.13",penwidth=1.2];
+edge [fontname="DejaVu Sans",fontsize=11,color="#536c7e",fontcolor="#31536a",arrowsize=0.8,penwidth=1.2,labeldistance=1.8,labelangle=25];
+label="Ciclo de turnos";
+A [shape=box,style="filled,rounded",label="Iniciar turno del\nparticipante"];
+B [shape=box,style="filled,rounded",label="Aplicar daño persistente"];
+C [shape=diamond,style="filled,rounded",label="¿Sigue vivo?"];
+Z [shape=box,style="filled,rounded",label="Finalizar combate y aplicar\nresultado"];
+D [shape=box,style="filled,rounded",label="Regenerar y actualizar\ncontadores"];
+E [shape=diamond,style="filled,rounded",label="¿Quedan acciones?"];
+N [shape=box,style="filled,rounded",label="Cambiar al otro participante"];
+V [shape=box,style="filled,rounded",label="Elegir y validar acción"];
+R [shape=diamond,style="filled,rounded",label="¿Puede ejecutarse?"];
+X [shape=box,style="filled,rounded",label="Consumir acción y recursos;\nresolver efecto"];
+K [shape=diamond,style="filled,rounded",label="¿Terminó el combate?"];
+A -> B [arrowhead=vee];
+B -> C [arrowhead=vee];
+C -> Z [arrowhead=vee,label="No"];
+C -> D [arrowhead=vee,label="Sí"];
+D -> E [arrowhead=vee];
+E -> N [arrowhead=vee,label="No"];
+N -> A [arrowhead=vee];
+E -> V [arrowhead=vee,label="Sí"];
+V -> R [arrowhead=vee];
+R -> V [arrowhead=vee,label="No, corregir selección"];
+R -> X [arrowhead=vee,label="Sí"];
+X -> K [arrowhead=vee];
+K -> Z [arrowhead=vee,label="Sí"];
+K -> E [arrowhead=vee,label="No"];
+}

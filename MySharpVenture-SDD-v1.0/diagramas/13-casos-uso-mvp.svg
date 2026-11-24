@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1370" height="1071" viewBox="0 0 1370 1071" role="img" aria-label="MySharpVenture - MVP">
+<defs><marker id="extendArrow" markerWidth="12" markerHeight="10" refX="10" refY="5" orient="auto"><path d="M1 1 L10 5 L1 9" fill="none" stroke="#46677a" stroke-width="1.5"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:DejaVu Sans,Arial,sans-serif;fill:#173044}.title{font-size:23px;font-weight:700}.label{font-size:18px}.small{font-size:15px}</style>
+<rect x="230" y="30" width="1110" height="986" rx="8" fill="white" stroke="#809eaf" stroke-width="1.5"/>
+<text x="785.0" y="66" class="title" text-anchor="middle">MySharpVenture - MVP</text>
+<line x1="130" y1="525.5" x2="300" y2="125" stroke="#698294" stroke-width="1.4"/>
+<line x1="130" y1="525.5" x2="300" y2="237" stroke="#698294" stroke-width="1.4"/>
+<line x1="130" y1="525.5" x2="300" y2="349" stroke="#698294" stroke-width="1.4"/>
+<line x1="130" y1="525.5" x2="300" y2="461" stroke="#698294" stroke-width="1.4"/>
+<line x1="130" y1="525.5" x2="300" y2="573" stroke="#698294" stroke-width="1.4"/>
+<line x1="130" y1="525.5" x2="300" y2="685" stroke="#698294" stroke-width="1.4"/>
+<line x1="130" y1="525.5" x2="300" y2="797" stroke="#698294" stroke-width="1.4"/>
+<line x1="130" y1="525.5" x2="300" y2="909" stroke="#698294" stroke-width="1.4"/>
+<circle cx="95" cy="486.5" r="13" fill="white" stroke="#173044" stroke-width="2"/>
+<path d="M95 499.5 V553.5 M60 525.5 H130 M95 553.5 L66 590.5 M95 553.5 L124 590.5" fill="none" stroke="#173044" stroke-width="2.2"/>
+<text x="95" y="618.5" class="label" text-anchor="middle">Jugador</text>
+<ellipse cx="540" cy="125" rx="240" ry="37" fill="#f3f7fa" stroke="#42667d" stroke-width="1.5"/>
+<text x="540" y="120" class="label" text-anchor="middle">CU05</text>
+<text x="540" y="145" class="label" text-anchor="middle">Crear personaje</text>
+<ellipse cx="540" cy="237" rx="240" ry="37" fill="#f3f7fa" stroke="#42667d" stroke-width="1.5"/>
+<text x="540" y="232" class="label" text-anchor="middle">CU07</text>
+<text x="540" y="257" class="label" text-anchor="middle">Gestionar inventario y equipo</text>
+<ellipse cx="540" cy="349" rx="240" ry="37" fill="#f3f7fa" stroke="#42667d" stroke-width="1.5"/>
+<text x="540" y="344" class="label" text-anchor="middle">CU03</text>
+<text x="540" y="369" class="label" text-anchor="middle">Gestionar stash</text>
+<ellipse cx="540" cy="461" rx="240" ry="37" fill="#f3f7fa" stroke="#42667d" stroke-width="1.5"/>
+<text x="540" y="456" class="label" text-anchor="middle">CU01</text>
+<text x="540" y="481" class="label" text-anchor="middle">Completar aventura</text>
+<ellipse cx="540" cy="573" rx="240" ry="37" fill="#f3f7fa" stroke="#42667d" stroke-width="1.5"/>
+<text x="540" y="568" class="label" text-anchor="middle">CU02</text>
+<text x="540" y="593" class="label" text-anchor="middle">Resolver combate</text>
+<ellipse cx="540" cy="685" rx="240" ry="37" fill="#f3f7fa" stroke="#42667d" stroke-width="1.5"/>
+<text x="540" y="680" class="label" text-anchor="middle">CU15</text>
+<text x="540" y="705" class="label" text-anchor="middle">Recoger botín</text>
+<ellipse cx="540" cy="797" rx="240" ry="37" fill="#f3f7fa" stroke="#42667d" stroke-width="1.5"/>
+<text x="540" y="792" class="label" text-anchor="middle">CU08</text>
+<text x="540" y="817" class="label" text-anchor="middle">Utilizar curación</text>
+<ellipse cx="540" cy="909" rx="240" ry="37" fill="#f3f7fa" stroke="#42667d" stroke-width="1.5"/>
+<text x="540" y="904" class="label" text-anchor="middle">CU14</text>
+<text x="540" y="929" class="label" text-anchor="middle">Salir del juego</text>
+<path d="M780 573 H870 V474 H764.70" fill="none" stroke="#46677a" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#extendArrow)"/>
+<rect x="876" y="499.5" width="134" height="46" fill="white"/>
+<text x="880" y="516.5" class="small">«extend»</text>
+<text x="880" y="537.5" class="small">Hay combate</text>
+<path d="M780 685 H1015 V448 H764.70" fill="none" stroke="#46677a" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#extendArrow)"/>
+<rect x="1021" y="542.5" width="134" height="46" fill="white"/>
+<text x="1025" y="559.5" class="small">«extend»</text>
+<text x="1025" y="580.5" class="small">Hay botín</text>
+<text x="230" y="1047" class="small">Las líneas con el jugador indican participación; las extensiones son condicionales.</text>
+</svg>

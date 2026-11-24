@@ -1,0 +1,37 @@
+erDiagram
+    direction TB
+    ITEM_CATALOG {
+        int catalog_item_id PK
+        string code UK
+        string name
+        string kind
+        int tier "Armas iniciales de tier 1"
+        boolean can_stash
+    }
+    STASH_ENTRY {
+        int catalog_item_id PK, FK
+        int quantity "Entero positivo"
+    }
+    WEAPON_DEFINITION {
+        int catalog_item_id PK, FK
+        string variant
+        decimal base_damage
+        decimal base_hit_chance
+        int magazine_capacity
+        int ammo_catalog_id FK
+    }
+    CONSUMABLE_DEFINITION {
+        int catalog_item_id PK, FK
+        string subtype "Municion o curacion"
+    }
+    ITEM_EFFECT {
+        int catalog_item_id PK, FK
+        int effect_order PK
+        string effect_code
+        decimal magnitude
+    }
+    ITEM_CATALOG ||--o| STASH_ENTRY : cantidad_guardada
+    ITEM_CATALOG ||--o| WEAPON_DEFINITION : detalle_arma
+    ITEM_CATALOG ||--o| CONSUMABLE_DEFINITION : detalle_consumible
+    ITEM_CATALOG ||--o{ ITEM_EFFECT : efecto_del_objeto
+    ITEM_CATALOG ||..o{ WEAPON_DEFINITION : es_municion_de

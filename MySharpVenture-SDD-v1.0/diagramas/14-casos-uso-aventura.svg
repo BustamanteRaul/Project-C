@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1370" height="847" viewBox="0 0 1370 847" role="img" aria-label="MySharpVenture - sesión y aventura">
+<defs><marker id="extendArrow" markerWidth="12" markerHeight="10" refX="10" refY="5" orient="auto"><path d="M1 1 L10 5 L1 9" fill="none" stroke="#46677a" stroke-width="1.5"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:DejaVu Sans,Arial,sans-serif;fill:#173044}.title{font-size:23px;font-weight:700}.label{font-size:18px}.small{font-size:15px}</style>
+<rect x="230" y="30" width="1110" height="762" rx="8" fill="white" stroke="#809eaf" stroke-width="1.5"/>
+<text x="785.0" y="66" class="title" text-anchor="middle">MySharpVenture - sesión y aventura</text>
+<line x1="130" y1="413.5" x2="300" y2="125" stroke="#698294" stroke-width="1.4"/>
+<line x1="130" y1="413.5" x2="300" y2="237" stroke="#698294" stroke-width="1.4"/>
+<line x1="130" y1="413.5" x2="300" y2="349" stroke="#698294" stroke-width="1.4"/>
+<line x1="130" y1="413.5" x2="300" y2="461" stroke="#698294" stroke-width="1.4"/>
+<line x1="130" y1="413.5" x2="300" y2="573" stroke="#698294" stroke-width="1.4"/>
+<line x1="130" y1="413.5" x2="300" y2="685" stroke="#698294" stroke-width="1.4"/>
+<circle cx="95" cy="374.5" r="13" fill="white" stroke="#173044" stroke-width="2"/>
+<path d="M95 387.5 V441.5 M60 413.5 H130 M95 441.5 L66 478.5 M95 441.5 L124 478.5" fill="none" stroke="#173044" stroke-width="2.2"/>
+<text x="95" y="506.5" class="label" text-anchor="middle">Jugador</text>
+<ellipse cx="540" cy="125" rx="240" ry="37" fill="#f3f7fa" stroke="#42667d" stroke-width="1.5"/>
+<text x="540" y="120" class="label" text-anchor="middle">CU05</text>
+<text x="540" y="145" class="label" text-anchor="middle">Crear personaje</text>
+<ellipse cx="540" cy="237" rx="240" ry="37" fill="#f3f7fa" stroke="#42667d" stroke-width="1.5"/>
+<text x="540" y="232" class="label" text-anchor="middle">CU01</text>
+<text x="540" y="257" class="label" text-anchor="middle">Completar aventura</text>
+<ellipse cx="540" cy="349" rx="240" ry="37" fill="#f3f7fa" stroke="#42667d" stroke-width="1.5"/>
+<text x="540" y="344" class="label" text-anchor="middle">CU02</text>
+<text x="540" y="369" class="label" text-anchor="middle">Resolver combate</text>
+<ellipse cx="540" cy="461" rx="240" ry="37" fill="#f3f7fa" stroke="#42667d" stroke-width="1.5"/>
+<text x="540" y="456" class="label" text-anchor="middle">CU15</text>
+<text x="540" y="481" class="label" text-anchor="middle">Recoger botín</text>
+<ellipse cx="540" cy="573" rx="240" ry="37" fill="#f3f7fa" stroke="#42667d" stroke-width="1.5"/>
+<text x="540" y="568" class="label" text-anchor="middle">CU13</text>
+<text x="540" y="593" class="label" text-anchor="middle">Retirarse</text>
+<ellipse cx="540" cy="685" rx="240" ry="37" fill="#f3f7fa" stroke="#42667d" stroke-width="1.5"/>
+<text x="540" y="680" class="label" text-anchor="middle">CU14</text>
+<text x="540" y="705" class="label" text-anchor="middle">Salir del juego</text>
+<path d="M780 349 H870 V263 H710.76" fill="none" stroke="#46677a" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#extendArrow)"/>
+<rect x="876" y="282.0" width="134" height="46" fill="white"/>
+<text x="880" y="299.0" class="small">«extend»</text>
+<text x="880" y="320.0" class="small">Hay combate</text>
+<path d="M780 461 H1015 V237 H780.00" fill="none" stroke="#46677a" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#extendArrow)"/>
+<rect x="1021" y="325.0" width="134" height="46" fill="white"/>
+<text x="1025" y="342.0" class="small">«extend»</text>
+<text x="1025" y="363.0" class="small">Hay botín</text>
+<path d="M780 573 H1160 V211 H710.76" fill="none" stroke="#46677a" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#extendArrow)"/>
+<rect x="1166" y="368.0" width="134" height="46" fill="white"/>
+<text x="1170" y="385.0" class="small">«extend»</text>
+<text x="1170" y="406.0" class="small">Solicita retirada</text>
+<text x="230" y="823" class="small">Las líneas con el jugador indican participación; las extensiones son condicionales.</text>
+</svg>

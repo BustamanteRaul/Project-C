@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="700" viewBox="0 0 1536 700" role="img" aria-label="Cronograma del MVP MySharpVenture para el 2 de diciembre de 2026">
+<rect width="100%" height="100%" fill="#fff"/>
+<style>text{font-family:DejaVu Sans,Arial,sans-serif;fill:#173044}.title{font-size:26px;font-weight:700}.sub{font-size:16px}.label{font-size:14px}.small{font-size:12px}.num{font-size:14px;font-weight:700}.date{font-size:12px;text-anchor:middle}</style>
+<text x="28" y="42" class="title">MySharpVenture · MVP para el 2 de diciembre</text>
+<text x="28" y="73" class="sub">Una persona · 4 h por día · lunes a sábado · 48 h planificadas + 8 h de reserva</text>
+<text x="28" y="104" class="small">Trabajo previo sin horas cuantificadas. El día de entrega no aporta horas al presupuesto.</text>
+<line x1="470.00" y1="152" x2="470.00" y2="555" stroke="#e5ebf0"/>
+<text x="496.84" y="129" class="date">14/11</text>
+<text x="496.84" y="147" class="date">S</text>
+<rect x="523.68" y="151" width="53.68" height="407" fill="#edf1f5"/>
+<line x1="523.68" y1="152" x2="523.68" y2="555" stroke="#e5ebf0"/>
+<text x="550.53" y="129" class="date">15/11</text>
+<text x="550.53" y="147" class="date">D</text>
+<line x1="577.37" y1="152" x2="577.37" y2="555" stroke="#e5ebf0"/>
+<text x="604.21" y="129" class="date">16/11</text>
+<text x="604.21" y="147" class="date">L</text>
+<line x1="631.05" y1="152" x2="631.05" y2="555" stroke="#e5ebf0"/>
+<text x="657.89" y="129" class="date">17/11</text>
+<text x="657.89" y="147" class="date">M</text>
+<line x1="684.74" y1="152" x2="684.74" y2="555" stroke="#e5ebf0"/>
+<text x="711.58" y="129" class="date">18/11</text>
+<text x="711.58" y="147" class="date">X</text>
+<line x1="738.42" y1="152" x2="738.42" y2="555" stroke="#e5ebf0"/>
+<text x="765.26" y="129" class="date">19/11</text>
+<text x="765.26" y="147" class="date">J</text>
+<line x1="792.11" y1="152" x2="792.11" y2="555" stroke="#e5ebf0"/>
+<text x="818.95" y="129" class="date">20/11</text>
+<text x="818.95" y="147" class="date">V</text>
+<line x1="845.79" y1="152" x2="845.79" y2="555" stroke="#e5ebf0"/>
+<text x="872.63" y="129" class="date">21/11</text>
+<text x="872.63" y="147" class="date">S</text>
+<rect x="899.47" y="151" width="53.68" height="407" fill="#edf1f5"/>
+<line x1="899.47" y1="152" x2="899.47" y2="555" stroke="#e5ebf0"/>
+<text x="926.32" y="129" class="date">22/11</text>
+<text x="926.32" y="147" class="date">D</text>
+<line x1="953.16" y1="152" x2="953.16" y2="555" stroke="#e5ebf0"/>
+<text x="980.00" y="129" class="date">23/11</text>
+<text x="980.00" y="147" class="date">L</text>
+<line x1="1006.84" y1="152" x2="1006.84" y2="555" stroke="#e5ebf0"/>
+<text x="1033.68" y="129" class="date">24/11</text>
+<text x="1033.68" y="147" class="date">M</text>
+<line x1="1060.53" y1="152" x2="1060.53" y2="555" stroke="#e5ebf0"/>
+<text x="1087.37" y="129" class="date">25/11</text>
+<text x="1087.37" y="147" class="date">X</text>
+<line x1="1114.21" y1="152" x2="1114.21" y2="555" stroke="#e5ebf0"/>
+<text x="1141.05" y="129" class="date">26/11</text>
+<text x="1141.05" y="147" class="date">J</text>
+<line x1="1167.89" y1="152" x2="1167.89" y2="555" stroke="#e5ebf0"/>
+<text x="1194.74" y="129" class="date">27/11</text>
+<text x="1194.74" y="147" class="date">V</text>
+<line x1="1221.58" y1="152" x2="1221.58" y2="555" stroke="#e5ebf0"/>
+<text x="1248.42" y="129" class="date">28/11</text>
+<text x="1248.42" y="147" class="date">S</text>
+<rect x="1275.26" y="151" width="53.68" height="407" fill="#edf1f5"/>
+<line x1="1275.26" y1="152" x2="1275.26" y2="555" stroke="#e5ebf0"/>
+<text x="1302.11" y="129" class="date">29/11</text>
+<text x="1302.11" y="147" class="date">D</text>
+<line x1="1328.95" y1="152" x2="1328.95" y2="555" stroke="#e5ebf0"/>
+<text x="1355.79" y="129" class="date">30/11</text>
+<text x="1355.79" y="147" class="date">L</text>
+<line x1="1382.63" y1="152" x2="1382.63" y2="555" stroke="#e5ebf0"/>
+<text x="1409.47" y="129" class="date">01/12</text>
+<text x="1409.47" y="147" class="date">M</text>
+<line x1="1436.32" y1="152" x2="1436.32" y2="555" stroke="#e5ebf0"/>
+<text x="1463.16" y="129" class="date">02/12</text>
+<text x="1463.16" y="147" class="date">X</text>
+<text x="28" y="182" class="label">SDD disponible</text>
+<polygon points="443.16,168 453.16,178 443.16,188 433.16,178" fill="#6f7d8c"/>
+<line x1="28" y1="199" x2="1508" y2="199" stroke="#edf1f5"/>
+<text x="28" y="226" class="label">M01  Entorno, estructura y navegación</text>
+<text x="456" y="226" class="num" text-anchor="end">4 h</text>
+<rect x="579.37" y="209" width="49.68" height="27" rx="4" fill="#2467a0"/>
+<line x1="28" y1="243" x2="1508" y2="243" stroke="#edf1f5"/>
+<text x="28" y="270" class="label">M02  Combate e inventario básicos</text>
+<text x="456" y="270" class="num" text-anchor="end">20 h</text>
+<rect x="633.05" y="253" width="264.42" height="27" rx="4" fill="#2467a0"/>
+<line x1="28" y1="287" x2="1508" y2="287" stroke="#edf1f5"/>
+<text x="28" y="314" class="label">M03  Watson, eventos, botín y muerte</text>
+<text x="456" y="314" class="num" text-anchor="end">8 h</text>
+<rect x="955.16" y="297" width="103.37" height="27" rx="4" fill="#2467a0"/>
+<line x1="28" y1="331" x2="1508" y2="331" stroke="#edf1f5"/>
+<text x="28" y="358" class="label">M04  Catálogo SQLite y stash</text>
+<text x="456" y="358" class="num" text-anchor="end">8 h</text>
+<rect x="1062.53" y="341" width="103.37" height="27" rx="4" fill="#2467a0"/>
+<line x1="28" y1="375" x2="1508" y2="375" stroke="#edf1f5"/>
+<text x="28" y="402" class="label">M05  Pruebas, correcciones y empaquetado</text>
+<text x="456" y="402" class="num" text-anchor="end">8 h</text>
+<rect x="1169.89" y="385" width="103.37" height="27" rx="4" fill="#247d78"/>
+<line x1="28" y1="419" x2="1508" y2="419" stroke="#edf1f5"/>
+<text x="28" y="446" class="label">M06  Reserva de estabilización</text>
+<text x="456" y="446" class="num" text-anchor="end">8 h</text>
+<rect x="1330.95" y="429" width="103.37" height="27" rx="4" fill="#b07819"/>
+<line x1="28" y1="463" x2="1508" y2="463" stroke="#edf1f5"/>
+<text x="28" y="490" class="label">Candidato completo previsto</text>
+<polygon points="1248.42,476 1258.42,486 1248.42,496 1238.42,486" fill="#247d78"/>
+<line x1="28" y1="507" x2="1508" y2="507" stroke="#edf1f5"/>
+<text x="28" y="534" class="label">Entrega escolar · miércoles 2/12</text>
+<polygon points="1463.16,520 1473.16,530 1463.16,540 1453.16,530" fill="#245b45"/>
+<line x1="28" y1="551" x2="1508" y2="551" stroke="#edf1f5"/>
+<rect x="28" y="587" width="16" height="16" fill="#edf1f5"/>
+<text x="53" y="600" class="small">Domingo sin trabajo planificado</text>
+<rect x="350" y="587" width="16" height="16" rx="2" fill="#b07819"/>
+<text x="375" y="600" class="small">Reserva incluida en las 56 h</text>
+<polygon points="705,585 715,595 705,605 695,595" fill="#6f7d8c"/>
+<text x="726" y="600" class="small">Hito, sin duración de trabajo asignada</text>
+<text x="28" y="638" class="sub">Candidato completo: sábado 28/11 · Correcciones: 30/11 y 01/12 · Entrega: miércoles 02/12</text>
+<text x="28" y="669" class="small">Fechas estimadas de desarrollo. La documentación base ya existe; las pruebas del juego aún están planificadas.</text>
+</svg>

@@ -1,0 +1,41 @@
+classDiagram
+direction TB
+class Person
+class ItemDefinition
+class GameSession {
+    +Person? CurrentCharacter
+    +GameState State
+}
+class Expedition {
+    +int EventCount = 5
+    +int EventsResolved
+    +bool HasMerchant
+    +Complete()
+    +Retreat()
+}
+class Zone {
+    +string Name
+    +string Affiliation
+    +int MinEnemyLevel
+    +int MaxEnemyLevel
+}
+class EventOccurrence {
+    +int Position
+    +EventType Type
+    +bool IsResolved
+    +Preview()
+}
+class Stash {
+    +List~StashEntry~ Entries
+}
+class StashEntry {
+    +int CatalogItemId
+    +int Quantity
+}
+GameSession "1" *-- "0..1" Person : personaje activo
+GameSession "1" *-- "0..1" Expedition : aventura activa
+GameSession "1" --> "1" Stash : unico compartido
+Expedition "0..*" --> "1" Zone : zona seleccionada
+Expedition "1" *-- "5" EventOccurrence : eventos
+Stash "1" *-- "0..*" StashEntry : cantidades guardadas
+StashEntry "0..*" --> "1" ItemDefinition : objeto del catalogo

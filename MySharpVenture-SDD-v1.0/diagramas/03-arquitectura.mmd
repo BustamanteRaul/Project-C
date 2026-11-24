@@ -1,0 +1,10 @@
+flowchart TB
+    UI["Terminal con Spectre.Console"] --> APP["Coordinación de sesión"]
+    APP --> COM["Resolución de combate"]
+    APP --> PRE["Servicios de preparación"]
+    APP --> CAT["Catálogos y configuración"]
+    COM --> DOM["Dominio y reglas"]
+    PRE --> DOM
+    PRE --> REP["Repositorio del stash"]
+    CAT --> DB["SQLite: catálogo y stash"]
+    REP --> DB

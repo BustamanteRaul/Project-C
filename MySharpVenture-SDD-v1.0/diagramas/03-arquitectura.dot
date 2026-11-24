@@ -1,0 +1,23 @@
+digraph G {
+graph [rankdir=TB,bgcolor="white",pad=0.35,nodesep=0.6,ranksep=0.9,splines=polyline,fontname="DejaVu Sans",fontsize=20,fontcolor="#173044",labelloc=t,compound=true];
+node [fontname="DejaVu Sans",fontsize=12,color="#42667d",fontcolor="#173044",style=filled,fillcolor="#f3f7fa",margin="0.18,0.13",penwidth=1.2];
+edge [fontname="DejaVu Sans",fontsize=11,color="#536c7e",fontcolor="#31536a",arrowsize=0.8,penwidth=1.2,labeldistance=1.8,labelangle=25];
+label="Dependencias entre componentes";
+UI [shape=box,style="filled,rounded",label="Terminal con Spectre.Console"];
+APP [shape=box,style="filled,rounded",label="Coordinación de sesión"];
+COM [shape=box,style="filled,rounded",label="Resolución de combate"];
+PRE [shape=box,style="filled,rounded",label="Servicios de preparación"];
+CAT [shape=box,style="filled,rounded",label="Catálogos y configuración"];
+DOM [shape=box,style="filled,rounded",label="Dominio y reglas"];
+REP [shape=box,style="filled,rounded",label="Repositorio del stash"];
+DB [shape=box,style="filled,rounded",label="SQLite: catálogo y stash"];
+UI -> APP [arrowhead=vee];
+APP -> COM [arrowhead=vee];
+APP -> PRE [arrowhead=vee];
+APP -> CAT [arrowhead=vee];
+COM -> DOM [arrowhead=vee];
+PRE -> DOM [arrowhead=vee];
+PRE -> REP [arrowhead=vee];
+CAT -> DB [arrowhead=vee];
+REP -> DB [arrowhead=vee];
+}

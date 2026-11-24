@@ -1,0 +1,38 @@
+digraph G {
+graph [rankdir=TB,bgcolor="white",pad=0.35,nodesep=0.6,ranksep=0.9,splines=polyline,fontname="DejaVu Sans",fontsize=20,fontcolor="#173044",labelloc=t,compound=true];
+node [fontname="DejaVu Sans",fontsize=12,color="#42667d",fontcolor="#173044",style=filled,fillcolor="#f3f7fa",margin="0.18,0.13",penwidth=1.2];
+edge [fontname="DejaVu Sans",fontsize=11,color="#536c7e",fontcolor="#31536a",arrowsize=0.8,penwidth=1.2,labeldistance=1.8,labelangle=25];
+label="Estados de sesión y aventura";
+inicio [shape=point,width=0.12,color="#173044",fillcolor="#173044"];
+fin [shape=doublecircle,label="",width=0.2,fillcolor="#173044"];
+Bienvenida [shape=box,style="filled,rounded"];
+Creacion [shape=box,style="filled,rounded",label="Creación de personaje"];
+Preparacion [shape=box,style="filled,rounded",label="Preparación"];
+SeleccionZona [shape=box,style="filled,rounded",label="Selección de zona"];
+subgraph cluster_aventura {label="Gestión de la aventura";fontsize=17;color="#9aafb9";style=rounded;
+inicio_a [shape=point,width=0.1,color="#173044",fillcolor="#173044"];
+fin_a [shape=doublecircle,label="",width=0.18,fillcolor="#173044"];
+Evento [shape=box,style="filled,rounded"];
+Combate [shape=box,style="filled,rounded"];
+Encuentro [shape=box,style="filled,rounded"];
+Gestion [shape=box,style="filled,rounded",label="Gestión y pausa"];
+inicio_a -> Evento;
+Evento -> Combate [label="Hostil"];
+Evento -> Encuentro [label="Hallazgo o comerciante"];
+Combate -> Gestion [label="Victoria"];
+Encuentro -> Gestion [label="Encuentro resuelto"];
+Gestion -> Evento [label="Continuar y quedan eventos"];
+Gestion -> fin_a [label="Continuar tras el quinto evento"];
+}
+inicio -> Bienvenida;
+Bienvenida -> Creacion [label="Iniciar"];
+Creacion -> Preparacion [label="Elegir origen"];
+Preparacion -> SeleccionZona [label="Iniciar sin sobrepeso"];
+SeleccionZona -> inicio_a [lhead=cluster_aventura,label="Elegir zona"];
+fin_a -> Preparacion [ltail=cluster_aventura,label="Completar y recuperar recursos"];
+Combate -> Creacion [label="Muerte y pérdida de carga"];
+Combate -> Preparacion [label="Retirada"];
+Encuentro -> Preparacion [label="Retirada"];
+Gestion -> Preparacion [label="Retirada"];
+Preparacion -> fin [label="Salir"];
+}

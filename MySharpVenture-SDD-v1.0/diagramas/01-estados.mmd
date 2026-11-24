@@ -1,0 +1,22 @@
+stateDiagram-v2
+    direction TB
+    [*] --> Bienvenida
+    Bienvenida --> Creacion: Iniciar
+    Creacion --> Preparacion: Elegir origen
+    Preparacion --> SeleccionZona: Iniciar sin sobrepeso
+    SeleccionZona --> Aventura: Elegir zona
+    state "Gestion de la aventura" as Aventura {
+        [*] --> Evento
+        Evento --> Combate: Encuentro hostil
+        Evento --> Encuentro: Hallazgo o comerciante
+        Combate --> Gestion: Victoria
+        Encuentro --> Gestion: Encuentro resuelto
+        Gestion --> Evento: Continuar y quedan eventos
+        Gestion --> [*]: Continuar tras el quinto evento
+    }
+    Aventura --> Preparacion: Completar y recuperar recursos
+    Combate --> Creacion: Muerte y perdida de carga
+    Combate --> Preparacion: Retirada
+    Encuentro --> Preparacion: Retirada
+    Gestion --> Preparacion: Retirada
+    Preparacion --> [*]: Salir

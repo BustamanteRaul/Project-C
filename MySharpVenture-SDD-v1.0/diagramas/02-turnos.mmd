@@ -1,0 +1,15 @@
+flowchart TB
+    A["Iniciar turno del participante"] --> B["Aplicar daño persistente"]
+    B --> C{"¿Sigue vivo?"}
+    C -->|No| Z["Finalizar combate y aplicar resultado"]
+    C -->|Sí| D["Regenerar y actualizar contadores"]
+    D --> E{"¿Quedan acciones?"}
+    E -->|No| N["Cambiar al otro participante"]
+    N --> A
+    E -->|Sí| V["Elegir y validar acción"]
+    V --> R{"¿Puede ejecutarse?"}
+    R -->|No, corregir selección| V
+    R -->|Sí| X["Consumir acción y recursos; resolver efecto"]
+    X --> K{"¿Terminó el combate?"}
+    K -->|Sí| Z
+    K -->|No| E

@@ -1,0 +1,24 @@
+digraph G {
+graph [rankdir=TB,bgcolor="white",pad=0.35,nodesep=0.6,ranksep=0.9,splines=polyline,fontname="DejaVu Sans",fontsize=20,fontcolor="#173044",labelloc=t,compound=true];
+node [fontname="DejaVu Sans",fontsize=12,color="#42667d",fontcolor="#173044",style=filled,fillcolor="#f3f7fa",margin="0.18,0.13",penwidth=1.2];
+edge [fontname="DejaVu Sans",fontsize=11,color="#536c7e",fontcolor="#31536a",arrowsize=0.8,penwidth=1.2,labeldistance=1.8,labelangle=25];
+label="Equipamiento, cyberware y efectos";
+Entity [shape=record,label="{Entity}"];
+Weapon [shape=record,label="{Weapon}"];
+Equipment [shape=record,label="{Equipment|+List\<Guid\> EquippedWeaponIds\l+List\<Guid\> InstalledCyberwareIds\l+int UsedCyberwareCapacity\l|+ValidateCapacity()\l}"];
+Cyberware [shape=record,label="{Cyberware}"];
+OperatingSystem [shape=record,label="{«abstract»\nOperatingSystem}"];
+Cyberdeck [shape=record,label="{Cyberdeck|+decimal CurrentRam\l+decimal MaxRam\l+int MaxQuickhacks = 4\l+List\<Guid\> EquippedQuickhackIds\l|+SpendRam(int amount)\l}"];
+Sandevistan [shape=record,label="{Sandevistan|+Activate(CombatContext context)\l}"];
+Quickhack [shape=record,label="{Quickhack}"];
+CombatEffect [shape=record,label="{CombatEffect|+string EffectCode\l+int RemainingTurns\l+bool IsTemporary\l|+Apply(Entity target)\l}"];
+Entity -> Equipment [dir=both,arrowtail=diamond,arrowhead=none,taillabel="1",headlabel="1",label="equipo"];
+Equipment -> Weapon [arrowhead=vee,taillabel="0..1",headlabel="0..3",label="armas equipadas"];
+Equipment -> Cyberware [arrowhead=vee,taillabel="0..1",headlabel="0..10",label="implantes instalados"];
+Cyberware -> OperatingSystem [dir=back,arrowtail=empty,arrowhead=none];
+OperatingSystem -> Cyberdeck [dir=back,arrowtail=empty,arrowhead=none];
+OperatingSystem -> Sandevistan [dir=back,arrowtail=empty,arrowhead=none];
+Cyberdeck -> Quickhack [arrowhead=vee,taillabel="0..1",headlabel="0..4",label="configurados"];
+Quickhack -> CombatEffect [arrowhead=vee,style=dashed,label="aplica"];
+Cyberware -> CombatEffect [arrowhead=vee,style=dashed,label="aporta o activa"];
+}

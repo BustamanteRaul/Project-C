@@ -1,0 +1,22 @@
+digraph G {
+graph [rankdir=TB,bgcolor="white",pad=0.35,nodesep=0.6,ranksep=0.9,splines=polyline,fontname="DejaVu Sans",fontsize=20,fontcolor="#173044",labelloc=t,compound=true];
+node [fontname="DejaVu Sans",fontsize=12,color="#42667d",fontcolor="#173044",style=filled,fillcolor="#f3f7fa",margin="0.18,0.13",penwidth=1.2];
+edge [fontname="DejaVu Sans",fontsize=11,color="#536c7e",fontcolor="#31536a",arrowsize=0.8,penwidth=1.2,labeldistance=1.8,labelangle=25];
+label="Objetos e inventario";
+Entity [shape=record,label="{Entity}"];
+Inventory [shape=record,label="{Inventory|+List\<Item\> Items\l+decimal CurrentWeight\l+decimal Capacity\l+bool IsOverweight\l|+Add(Item item)\l+Remove(Guid runtimeId)\l+WeightOf(Item item)\l}"];
+Item [shape=record,label="{«abstract»\nItem|+Guid RuntimeId\l+int CatalogItemId\l+ItemDefinition Definition\l}"];
+Weapon [shape=record,label="{Weapon|+WeaponVariant Variant\l+int LoadedAmmo\l+int MagazineCapacity\l|+Reload()\l}"];
+Accessory [shape=record,label="{Accessory|+AccessorySlot Slot\l|+IsCompatibleWith(Weapon weapon)\l}"];
+Consumable [shape=record,label="{Consumable|+ConsumableType Type\l+int Quantity\l}"];
+Cyberware [shape=record,label="{Cyberware|+BodyZone Slot\l+int CapacityCost\l}"];
+Quickhack [shape=record,label="{Quickhack|+int RamCost\l}"];
+Entity -> Inventory [dir=both,arrowtail=diamond,arrowhead=none,taillabel="1",headlabel="1",label="pertenencia"];
+Inventory -> Item [arrowhead=vee,taillabel="0..1",headlabel="0..*",label="objetos"];
+Item -> Weapon [dir=back,arrowtail=empty,arrowhead=none];
+Item -> Accessory [dir=back,arrowtail=empty,arrowhead=none];
+Item -> Consumable [dir=back,arrowtail=empty,arrowhead=none];
+Item -> Cyberware [dir=back,arrowtail=empty,arrowhead=none];
+Item -> Quickhack [dir=back,arrowtail=empty,arrowhead=none];
+Weapon -> Accessory [arrowhead=vee,taillabel="0..1",headlabel="0..2",label="mira y cargador"];
+}
